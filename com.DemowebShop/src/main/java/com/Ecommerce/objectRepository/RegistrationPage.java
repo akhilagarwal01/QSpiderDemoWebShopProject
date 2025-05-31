@@ -50,9 +50,10 @@ public class RegistrationPage extends BaseTest {
 		Thread.sleep(3000);
 		registerButton.click();
 		Thread.sleep(2000);
+		String result = regSuccessMessage.getText();
 		logoutButton.click();
 		
-		return regSuccessMessage.getText();
+		return result;
 
 	}
 

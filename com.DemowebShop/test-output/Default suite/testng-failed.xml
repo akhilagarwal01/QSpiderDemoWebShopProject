@@ -6,7 +6,7 @@
       <class name="com.DemowebShop.testScripts.registerModule.RegistrationTest">
         <methods>
           <include name="closeServer"/>
-          <include name="doResgistration" invocation-numbers="0 1 2"/>
+          <include name="doResgistration" invocation-numbers="1 2"/>
           <include name="connectDatabaseConnection"/>
           <include name="teatDown"/>
           <include name="connectServer"/>
