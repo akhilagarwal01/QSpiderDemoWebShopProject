@@ -1,0 +1,8 @@
+/target/
+
+
+# Do not share any html file
+*.html
+*.xml
+
+com.DemowebShop\test-output\
