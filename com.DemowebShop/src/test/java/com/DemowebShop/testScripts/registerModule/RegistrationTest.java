@@ -14,11 +14,11 @@ public class RegistrationTest extends BaseClass {
 
 	@DataProvider(name = "multipleUserRegistration")
 	public Object[][] registerData() {
-		return ExcelUtility.readExcel(EXCEL_PATH, SHEET_NAME);
+		return ExcelUtility.readExcel(EXCEL_PATH, NEW_USER);
 	}
 
 	@Test(dataProvider = "multipleUserRegistration")
-	public void doResgistration(String gender, String firstName, String lastName, String email, String password)
+	public void doResgistration(String gender, String firstName, String lastName, String password)
 			throws InterruptedException {
 
 		SoftAssert s = new SoftAssert();
@@ -26,6 +26,9 @@ public class RegistrationTest extends BaseClass {
 		// click on registration link
 		WelcomePage wp = new WelcomePage(driver);
 		wp.goToRegistrationPage();
+		
+		//get the random emailId
+		String email = u.getRandomEmail();
 
 		// Fill the registration form at registration page
 		RegistrationPage rp = new RegistrationPage(driver);

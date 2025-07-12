@@ -47,7 +47,6 @@ public class RegistrationPage extends BaseTest {
 		emailtextField.sendKeys(email);
 		passwordField.sendKeys(password);
 		ConfirmPassword.sendKeys(password);
-		Thread.sleep(3000);
 		registerButton.click();
 		Thread.sleep(2000);
 		String result = regSuccessMessage.getText();
